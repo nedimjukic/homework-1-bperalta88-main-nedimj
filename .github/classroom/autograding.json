@@ -1,0 +1,104 @@
+{
+  "tests": [
+    {
+      "name": "Question1",
+      "setup": "",
+      "run": "mvn -Dtest=CreateMessageHandlerTest test",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 10
+    },
+    {
+      "name": "Question2",
+      "setup": "",
+      "run": "mvn -Dtest=CreateUserHandlerTest test",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 10
+    },
+    {
+      "name": "Question3",
+      "setup": "",
+      "run": "mvn -Dtest=GetMessagesHandlerTest test",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 10
+    },
+    {
+      "name": "Question4",
+      "setup": "",
+      "run": "mvn -Dtest=GetUsersHandlerTest test",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 10
+    },
+    {
+      "name": "Question5",
+      "setup": "",
+      "run": "mvn -Dtest=CustomHttpResponseTest test",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 10
+    },
+    {
+      "name": "Question6",
+      "setup": "",
+      "run": "mvn -Dtest=NotFoundTest test",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 10
+    },
+    {
+      "name": "Question7",
+      "setup": "",
+      "run": "mvn -Dtest=BasicRequestTest test",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 10
+    },
+    {
+      "name": "Question8",
+      "setup": "",
+      "run": "mvn -Dtest=QueryParamsRequest test",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 10
+    },
+    {
+      "name": "Question9",
+      "setup": "",
+      "run": "mvn -Dtest=TestRequestParserBody test",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 10
+    },
+    {
+      "name": "Question10",
+      "setup": "",
+      "run": "mvn -Dtest=DaoTests test",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 10
+    }
+  ]
+}
