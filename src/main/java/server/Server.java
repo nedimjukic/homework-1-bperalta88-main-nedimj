@@ -62,6 +62,15 @@ public class Server {
   public static String processRequest(String requestString){
     ParsedRequest request = CustomParser.parse(requestString);
     BaseHandler handler = HandlerFactory.getHandler(request);
+
+    /*added this here, since not founding the right handler should be checked earlier than handling the request
+    because this should be part of routing, not particular handler and there are better ways to handle this
+    situation but this one was the fastest for me */
+
+    if (handler == null){
+      return "HTTP/1.1 404 Not Found\n";
+    }
+
     CustomHttpResponse response = handler.handleRequest(request);
     response.headers.put("Content-type", "application/json");
     return response.toString();

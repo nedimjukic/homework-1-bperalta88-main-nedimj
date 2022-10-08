@@ -1,9 +1,12 @@
 package handler;
 
 import dao.MessageDao;
+import dao.UserDao;
 import dto.MessageDto;
 import java.util.List;
 import org.testng.Assert;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.Test;
 import server.Server;
 
@@ -28,5 +31,12 @@ public class CreateMessageHandlerTest {
     Assert.assertEquals(messageDtos.size(), 1);
     Assert.assertNotNull(messageDtos.get(0).getUniqueId());
     Assert.assertEquals(messageDtos.get(0).getMessage(), messageDto.getMessage());
+  }
+
+  // we need to clear the state of our storage after every test, so tests are not fake
+  @AfterMethod
+  public void clearState(){
+    MessageDao.getInstance().clear();
+    UserDao.getInstance().clear();
   }
 }

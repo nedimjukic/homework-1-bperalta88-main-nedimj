@@ -6,6 +6,8 @@ import java.lang.reflect.Modifier;
 import java.util.Arrays;
 import java.util.List;
 import org.testng.Assert;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.Test;
 
 public class DaoTests {
@@ -29,5 +31,12 @@ public class DaoTests {
     MessageDto messageDto = new MessageDto(id);
     messageDao.put(messageDto);
     Assert.assertEquals(messageDao.get(id), messageDto);
+  }
+
+  // we need to clear the state of our storage after every test, so tests are not fake
+  @AfterMethod
+  public void clearState(){
+    MessageDao.getInstance().clear();
+    UserDao.getInstance().clear();
   }
 }

@@ -41,4 +41,8 @@ public class ParsedRequest {
   public void setBody(String body) {
     this.body = body;
   }
+
+  public void setQueryMap(Map<String, String> queryMap) {
+    this.queryMap = queryMap;
+  }
 }
